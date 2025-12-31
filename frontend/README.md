@@ -5,16 +5,16 @@ E-Commerce Analytics Dashboard built with Next.js 14, TypeScript, and Tailwind C
 ## Screenshots
 
 ### Login
-![Login Page](/screenshots/login.png)
+![Login Page](public/screenshots/login.png)
 
 ### Dashboard
-![Dashboard](/screenshots/dashboard.png)
+![Dashboard](public/screenshots/dashboard.png)
 
 ### Orders
-![Orders](/screenshots/orders.png)
+![Orders](public/screenshots/orders.png)
 
 ### Products
-![Products](/screenshots/products.png)
+![Products](public/screenshots/products.png)
 
 ## Tech Stack
 
