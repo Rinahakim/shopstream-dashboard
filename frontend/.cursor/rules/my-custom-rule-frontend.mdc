@@ -1,0 +1,42 @@
+---
+alwaysApply: true
+---
+
+# Internationalization (i18n) - MANDATORY
+
+*ALWAYS use translation keys for all user-facing text. NEVER hardcode text strings.*
+
+## Rules:
+1. All visible text in components must use translation keys from the i18n system
+2. Translation files are located in src/i18n/lng/ (en.json, he.json)
+3. Use the existing page keys from src/constants/stringsRes/translationPageKeys.ts when applicable
+4. When adding new text:
+   - First add the translation key to BOTH en.json and he.json
+   - Then reference it using the translation hook/function (e.g., t('page.key'))
+
+## ❌ Bad (hardcoded text):
+tsx
+<h1>Welcome to our platform</h1>
+<button>Submit</button>
+<p>Enter your email address</p>
+
+
+## ✅ Good (using translation keys):
+tsx
+<h1>{t('home_page.welcome_title')}</h1>
+<button>{t('common.submit_button')}</button>
+<p>{t('form.email_placeholder')}</p>
+
+
+## Exceptions:
+- Technical identifiers (CSS classes, IDs, data attributes)
+- Code comments
+- Console logs for debugging
+- Constants that are not user-facing (API endpoints, config values)
+
+## When creating new pages or components:
+1. Create a new section in the translation files if needed
+2. Add the page key to translationPageKeys.ts if it's a new page
+3. Use descriptive, hierarchical keys (e.g., page_name.section.element)---
+alwaysApply: true
+---

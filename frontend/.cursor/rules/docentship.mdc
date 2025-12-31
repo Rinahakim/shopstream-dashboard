@@ -1,0 +1,9 @@
+---
+alwaysApply: true
+---
+
+Frontend documentation must include:
+- App purpose
+- Pages and main components
+- i18n usage (Hebrew / English)
+- How to run the frontend

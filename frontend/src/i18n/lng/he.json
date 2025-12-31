@@ -1,0 +1,104 @@
+{
+  "common": {
+    "loading": "טוען...",
+    "error": "משהו השתבש",
+    "retry": "נסה שוב",
+    "submit": "שלח",
+    "cancel": "ביטול",
+    "save": "שמור",
+    "delete": "מחק",
+    "edit": "ערוך",
+    "view": "צפה",
+    "search": "חיפוש",
+    "filter": "סינון",
+    "all": "הכל",
+    "logout": "התנתק",
+    "welcome": "ברוך הבא"
+  },
+  "auth": {
+    "login_title": "התחברות ל-ShopStream",
+    "login_subtitle": "הזן את פרטי ההתחברות שלך",
+    "username_label": "שם משתמש",
+    "username_placeholder": "הזן שם משתמש",
+    "password_label": "סיסמה",
+    "password_placeholder": "הזן סיסמה",
+    "login_button": "התחבר",
+    "logging_in": "מתחבר...",
+    "login_error": "שם משתמש או סיסמה שגויים",
+    "username_min_length": "שם משתמש חייב להכיל לפחות 4 תווים",
+    "password_min_length": "סיסמה חייבת להכיל לפחות 8 תווים",
+    "session_expired": "פג תוקף ההתחברות. אנא התחבר מחדש.",
+    "branding_title": "לוח בקרה אנליטי",
+    "branding_subtitle": "עקוב אחר הכנסות, נהל הזמנות וקטלוג מוצרים בצורה יעילה.",
+    "copyright": "© 2024 ShopStream. כל הזכויות שמורות.",
+    "demo_credentials": "פרטי התחברות לדוגמה: admin / admin123"
+  },
+  "navigation": {
+    "dashboard": "לוח בקרה",
+    "orders": "הזמנות",
+    "products": "מוצרים"
+  },
+  "dashboard": {
+    "title": "לוח בקרה אנליטי",
+    "subtitle": "סקירה כללית של ביצועי העסק",
+    "metrics": {
+      "total_revenue": "סך הכנסות",
+      "total_orders": "סך הזמנות",
+      "avg_order_value": "ממוצע הזמנה",
+      "total_products": "סך מוצרים"
+    },
+    "charts": {
+      "revenue_trend_title": "מגמת הכנסות (7 ימים אחרונים)",
+      "order_status_title": "התפלגות סטטוס הזמנות",
+      "revenue": "הכנסות",
+      "orders": "הזמנות"
+    }
+  },
+  "orders": {
+    "title": "הזמנות",
+    "subtitle": "צפה ונהל את כל ההזמנות",
+    "table": {
+      "order_id": "מזהה הזמנה",
+      "customer": "לקוח",
+      "product": "מוצר",
+      "quantity": "כמות",
+      "amount": "סכום",
+      "status": "סטטוס",
+      "date": "תאריך"
+    },
+    "filter": {
+      "all_statuses": "כל הסטטוסים",
+      "processed": "בעיבוד",
+      "in_delivery": "במשלוח",
+      "delivered": "נמסר"
+    },
+    "empty": "לא נמצאו הזמנות",
+    "empty_filtered": "לא נמצאו הזמנות התואמות לסינון",
+    "error_loading": "שגיאה בטעינת הזמנות"
+  },
+  "products": {
+    "title": "מוצרים",
+    "subtitle": "צפה בכל המוצרים בקטלוג",
+    "table": {
+      "name": "שם המוצר",
+      "description": "תיאור",
+      "price": "מחיר",
+      "cost": "עלות",
+      "stock": "מלאי",
+      "margin": "רווחיות"
+    },
+    "empty": "לא נמצאו מוצרים",
+    "error_loading": "שגיאה בטעינת מוצרים",
+    "in_stock": "במלאי",
+    "low_stock": "מלאי נמוך",
+    "out_of_stock": "אזל מהמלאי"
+  },
+  "errors": {
+    "network": "שגיאת רשת. בדוק את החיבור שלך.",
+    "server": "שגיאת שרת. נסה שוב מאוחר יותר.",
+    "unauthorized": "אין לך הרשאה לגשת למשאב זה.",
+    "not_found": "המשאב המבוקש לא נמצא.",
+    "unknown": "אירעה שגיאה בלתי צפויה."
+  }
+}
+

@@ -1,0 +1,104 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Retry",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "search": "Search",
+    "filter": "Filter",
+    "all": "All",
+    "logout": "Logout",
+    "welcome": "Welcome"
+  },
+  "auth": {
+    "login_title": "Sign in to ShopStream",
+    "login_subtitle": "Enter your credentials to access the dashboard",
+    "username_label": "Username",
+    "username_placeholder": "Enter your username",
+    "password_label": "Password",
+    "password_placeholder": "Enter your password",
+    "login_button": "Sign In",
+    "logging_in": "Signing in...",
+    "login_error": "Invalid username or password",
+    "username_min_length": "Username must be at least 4 characters",
+    "password_min_length": "Password must be at least 8 characters",
+    "session_expired": "Your session has expired. Please sign in again.",
+    "branding_title": "Analytics Dashboard",
+    "branding_subtitle": "Track revenue, monitor orders, and manage your product catalog efficiently.",
+    "copyright": "© 2024 ShopStream. All rights reserved.",
+    "demo_credentials": "Demo credentials: admin / admin123"
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "orders": "Orders",
+    "products": "Products"
+  },
+  "dashboard": {
+    "title": "Analytics Dashboard",
+    "subtitle": "Overview of your business performance",
+    "metrics": {
+      "total_revenue": "Total Revenue",
+      "total_orders": "Total Orders",
+      "avg_order_value": "Avg. Order Value",
+      "total_products": "Total Products"
+    },
+    "charts": {
+      "revenue_trend_title": "Revenue Trend (Last 7 Days)",
+      "order_status_title": "Order Status Distribution",
+      "revenue": "Revenue",
+      "orders": "Orders"
+    }
+  },
+  "orders": {
+    "title": "Orders",
+    "subtitle": "View and manage all orders",
+    "table": {
+      "order_id": "Order ID",
+      "customer": "Customer",
+      "product": "Product",
+      "quantity": "Qty",
+      "amount": "Amount",
+      "status": "Status",
+      "date": "Date"
+    },
+    "filter": {
+      "all_statuses": "All Statuses",
+      "processed": "Processed",
+      "in_delivery": "In Delivery",
+      "delivered": "Delivered"
+    },
+    "empty": "No orders found",
+    "empty_filtered": "No orders match the selected filter",
+    "error_loading": "Failed to load orders"
+  },
+  "products": {
+    "title": "Products",
+    "subtitle": "View all products in the catalog",
+    "table": {
+      "name": "Product Name",
+      "description": "Description",
+      "price": "Price",
+      "cost": "Cost",
+      "stock": "Stock",
+      "margin": "Margin"
+    },
+    "empty": "No products found",
+    "error_loading": "Failed to load products",
+    "in_stock": "In Stock",
+    "low_stock": "Low Stock",
+    "out_of_stock": "Out of Stock"
+  },
+  "errors": {
+    "network": "Network error. Please check your connection.",
+    "server": "Server error. Please try again later.",
+    "unauthorized": "You are not authorized to access this resource.",
+    "not_found": "The requested resource was not found.",
+    "unknown": "An unexpected error occurred."
+  }
+}
+

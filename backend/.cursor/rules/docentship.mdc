@@ -1,0 +1,15 @@
+---
+alwaysApply: true
+---
+
+Always create clear project documentation.
+
+For each project:
+- Generate a README.md file
+- Explain project purpose
+- List technologies used
+- Describe folder structure
+- Document authentication flow
+- Document all API endpoints
+- Explain how to run the project locally
+- Keep documentation concise and clear

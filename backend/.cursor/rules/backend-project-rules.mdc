@@ -1,0 +1,29 @@
+This is a Backend project.
+
+Principles:
+- Clear separation between routes, services, and models
+- No business logic in controllers
+
+API:
+- Clear and consistent REST API
+- Endpoint names in English only
+
+Authentication:
+- Use JWT
+- Authorization must be handled via middleware
+
+Code:
+- Clean, simple, no over-engineering
+- Full and proper error handling
+
+Forbidden:
+- Duplicate code
+- console.log in production
+- Assumptions not explicitly defined in the requirements
+
+Goal:
+- A stable, predictable, and easily extensible server
+- Full implementation of the requirements defined in the provided file
+---
+alwaysApply: true
+---
