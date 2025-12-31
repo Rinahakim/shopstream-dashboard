@@ -65,21 +65,21 @@ Open http://localhost:3001
 
 ```
 shopstream-dashboard/
-â”œâ”€â”€ backend/          # Hono API server
-â”‚   â”œâ”€â”€ src/
-â”‚   â”‚   â”œâ”€â”€ controllers/
-â”‚   â”‚   â”œâ”€â”€ services/
-â”‚   â”‚   â”œâ”€â”€ models/
-â”‚   â”‚   â””â”€â”€ routes/
-â”‚   â””â”€â”€ README.md
-â”œâ”€â”€ frontend/         # Next.js application
-â”‚   â”œâ”€â”€ src/
-â”‚   â”‚   â”œâ”€â”€ app/
-â”‚   â”‚   â”œâ”€â”€ components/
-â”‚   â”‚   â”œâ”€â”€ services/
-â”‚   â”‚   â””â”€â”€ hooks/
-â”‚   â””â”€â”€ README.md
-â””â”€â”€ README.md         # This file
++-- backend/              # Hono API server
+|   +-- src/
+|   |   +-- controllers/
+|   |   +-- services/
+|   |   +-- models/
+|   |   +-- routes/
+|   +-- README.md
++-- frontend/             # Next.js application
+|   +-- src/
+|   |   +-- app/
+|   |   +-- components/
+|   |   +-- services/
+|   |   +-- hooks/
+|   +-- README.md
++-- README.md             # This file
 ```
 
 ## Features
