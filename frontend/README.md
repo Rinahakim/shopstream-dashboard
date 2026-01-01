@@ -2,6 +2,26 @@
 
 E-Commerce Analytics Dashboard built with Next.js 14, TypeScript, and Tailwind CSS.
 
+## Quick Start
+
+```bash
+# 1. Install dependencies
+npm install
+
+# 2. Create environment file
+cp .env.example .env.local
+
+# 3. Verify API URL in .env.local:
+NEXT_PUBLIC_API_URL=http://localhost:3001
+
+# 4. Start frontend (make sure backend is running first!)
+npm run dev
+```
+
+**Login credentials:** `admin` / `admin123`
+
+---
+
 ## Screenshots
 
 ### Login
@@ -55,31 +75,25 @@ src/
 ### Prerequisites
 - Node.js 18+
 - npm
+- Backend running on port 3001
 
 ### Installation
 
 ```bash
-# Clone the repository
 cd frontend
-
-# Install dependencies
 npm install
-
-# Create environment file
-# Copy .env.example to .env.local and configure:
-# NEXT_PUBLIC_API_URL=http://localhost:3000
 ```
 
 ### Environment Variables
 
 | Variable | Description | Default |
 |----------|-------------|---------|
-| `NEXT_PUBLIC_API_URL` | Backend API URL | `http://localhost:3000` |
+| `NEXT_PUBLIC_API_URL` | Backend API URL | `http://localhost:3001` |
 
 ## Development
 
 ```bash
-# Start development server (port 3001)
+# Start development server (port 3000)
 npm run dev
 
 # Run tests
@@ -90,9 +104,6 @@ npm run test:run
 
 # Build for production
 npm run build
-
-# Run production build
-npm run start
 
 # Lint code
 npm run lint
