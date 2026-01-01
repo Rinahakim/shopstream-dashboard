@@ -12,7 +12,7 @@ npm install
 cp .env.example .env.local
 
 # 3. Verify API URL in .env.local:
-NEXT_PUBLIC_API_URL=http://localhost:3001
+NEXT_PUBLIC_API_URL=http://localhost:3000
 
 # 4. Start frontend (make sure backend is running first!)
 npm run dev
@@ -75,7 +75,7 @@ src/
 ### Prerequisites
 - Node.js 18+
 - npm
-- Backend running on port 3001
+- Backend running on port 3000
 
 ### Installation
 
@@ -88,12 +88,12 @@ npm install
 
 | Variable | Description | Default |
 |----------|-------------|---------|
-| `NEXT_PUBLIC_API_URL` | Backend API URL | `http://localhost:3001` |
+| `NEXT_PUBLIC_API_URL` | Backend API URL | `http://localhost:3000` |
 
 ## Development
 
 ```bash
-# Start development server (port 3000)
+# Start development server (port 3001)
 npm run dev
 
 # Run tests

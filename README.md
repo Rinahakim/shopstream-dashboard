@@ -39,8 +39,7 @@ cd shopstream-dashboard
 cd backend
 npm install
 cp .env.example .env
-# Edit .env with your MongoDB connection string
-npm run seed    # Seed database with demo data
+# .env.example already contains Atlas cloud database connection
 npm run dev     # Starts on http://localhost:3000
 ```
 
