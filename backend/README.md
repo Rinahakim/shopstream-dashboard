@@ -2,6 +2,25 @@
 
 E-commerce analytics dashboard backend built with Hono + TypeScript + MongoDB.
 
+## Quick Start
+
+The database is already set up in the cloud. Just connect and run!
+
+```bash
+# 1. Install dependencies
+npm install
+
+# 2. Create .env file
+cp .env.example .env
+
+# 3. Start server
+npm run dev
+```
+
+**Login credentials:** `admin` / `admin123`
+
+---
+
 ## Technologies
 
 - **Framework:** Hono (Node.js)
@@ -20,8 +39,7 @@ src/
 ├── models/         # Mongoose schemas (User, Product, Order)
 ├── routes/         # API route definitions
 ├── services/       # Business logic
-├── utils/          # JWT, hashing, logger
-└── scripts/        # Database seeding
+└── utils/          # JWT, hashing, logger
 ```
 
 ## Authentication Flow
@@ -52,50 +70,20 @@ src/
 | GET | `/orders` | `status?` | List orders (filter: Processed, In Delivery, Delivered) |
 | GET | `/products` | - | List all products (sorted A-Z) |
 
-## Running Locally
+## Environment Variables
 
-### Prerequisites
-
-- Node.js 18+
-- MongoDB running locally or connection string
-
-### Setup
-
-```bash
-# Install dependencies
-npm install
-
-# Create .env file
-cp .env.example .env
-# Edit .env with your MongoDB URI
-
-# Seed database (creates admin user + demo data)
-npm run seed
-
-# Start development server
-npm run dev
-```
-
-### Environment Variables
-
-```
-PORT=3001
-MONGO_URI=mongodb://localhost:27017
-MONGO_DB_NAME=shopstream
-JWT_SECRET=your-secret-key
-```
-
-### Default Credentials
-
-- Username: `admin`
-- Password: `admin123`
+| Variable | Description | Example |
+|----------|-------------|---------|
+| `PORT` | Server port | `3001` |
+| `MONGO_URI` | MongoDB connection string | `mongodb+srv://...` |
+| `MONGO_DB_NAME` | Database name | `shopstream` |
+| `JWT_SECRET` | Secret for JWT signing | `your-secret-key` |
 
 ## Scripts
 
 | Command | Description |
 |---------|-------------|
 | `npm run dev` | Start dev server with hot reload |
-| `npm run seed` | Populate database with demo data |
 | `npm test` | Run unit tests |
 
 ## Testing
@@ -109,3 +97,7 @@ npm test
 - Analytics service (metrics, order status)
 - Orders service (filtering, edge cases)
 
+## Default Credentials
+
+- **Username:** `admin`
+- **Password:** `admin123`
