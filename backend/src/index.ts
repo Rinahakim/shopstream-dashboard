@@ -1,4 +1,14 @@
-﻿import { Hono } from 'hono';
+﻿/**
+ * Hono Application Configuration
+ * 
+ * This file sets up the Hono app instance with:
+ * - Global middlewares (logger, CORS)
+ * - Route registrations
+ * 
+ * The app is exported and consumed by server.ts
+ */
+
+import { Hono } from 'hono';
 import { cors } from 'hono/cors';
 import { loggerMiddleware } from './middlewares/logger.middleware';
 import healthRoutes from './routes/health.routes';
@@ -9,20 +19,27 @@ import productsRoutes from './routes/products.routes';
 
 const app = new Hono();
 
-// Logger middleware (dev only)
+// ============================================
+// MIDDLEWARES (applied to all routes)
+// ============================================
+
+/** Request/response logger - only active in development */
 app.use('*', loggerMiddleware);
 
-// CORS middleware
+/** CORS - allows frontend (port 3001) to make requests */
 app.use('*', cors({
     origin: ['http://localhost:3001'],
     credentials: true,
 }));
 
-// Routes
-app.route('/', healthRoutes);
-app.route('/auth', authRoutes);
-app.route('/analytics', analyticsRoutes);
-app.route('/orders', ordersRoutes);
-app.route('/products', productsRoutes);
+// ============================================
+// ROUTES
+// ============================================
+
+app.route('/', healthRoutes);           // GET /health
+app.route('/auth', authRoutes);         // POST /auth/login
+app.route('/analytics', analyticsRoutes); // GET /analytics/*
+app.route('/orders', ordersRoutes);     // GET /orders
+app.route('/products', productsRoutes); // GET /products
 
 export default app;

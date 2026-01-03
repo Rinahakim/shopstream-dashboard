@@ -1,9 +1,23 @@
 import bcrypt from 'bcrypt';
 
+/** Number of salt rounds for bcrypt hashing */
+const SALT_ROUNDS = 10;
+
+/**
+ * Hash a plain-text password using bcrypt.
+ * @param password - Plain-text password
+ * @returns Hashed password string
+ */
 export async function hashPassword(password: string): Promise<string> {
-    return bcrypt.hash(password, 10);
+    return bcrypt.hash(password, SALT_ROUNDS);
 }
 
+/**
+ * Compare a plain-text password against a stored hash.
+ * @param plain - Plain-text password to verify
+ * @param hashed - Stored bcrypt hash
+ * @returns True if password matches, false otherwise
+ */
 export async function verifyPassword(plain: string, hashed: string): Promise<boolean> {
     return bcrypt.compare(plain, hashed);
 }
