@@ -33,6 +33,15 @@ export function LoginForm() {
     resolver: zodResolver(loginSchema),
   });
 
+  // Map backend error messages to translation keys
+  const getErrorMessage = (backendError: string): string => {
+    const errorMap: Record<string, string> = {
+      'User not found': t('user_not_found'),
+      'Invalid credentials': t('invalid_credentials'),
+    };
+    return errorMap[backendError] || t('login_error');
+  };
+
   const onSubmit = async (data: LoginFormData) => {
     setError(null);
     try {
@@ -45,7 +54,8 @@ export function LoginForm() {
     } catch (err) {
       logger.error('Login failed', 'LoginForm', err);
       if (err instanceof AxiosError) {
-        setError(err.response?.data?.error || t('login_error'));
+        const backendError = err.response?.data?.error;
+        setError(getErrorMessage(backendError));
       } else {
         setError(t('login_error'));
       }

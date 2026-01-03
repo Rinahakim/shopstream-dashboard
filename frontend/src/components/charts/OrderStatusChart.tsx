@@ -24,9 +24,21 @@ const COLORS = {
 
 export function OrderStatusChart({ data }: OrderStatusChartProps) {
   const t = useTranslations('dashboard.charts');
+  const tStatus = useTranslations('orders.filter');
+
+  // Map status to translation key
+  const getStatusTranslation = (status: string) => {
+    const statusMap: Record<string, string> = {
+      'Processed': 'processed',
+      'In Delivery': 'in_delivery',
+      'Delivered': 'delivered',
+    };
+    return tStatus(statusMap[status] || status);
+  };
 
   const chartData = data.map((item) => ({
     ...item,
+    translatedStatus: getStatusTranslation(item.status),
     fill: COLORS[item.status] || '#64748b',
   }));
 
@@ -47,7 +59,7 @@ export function OrderStatusChart({ data }: OrderStatusChartProps) {
                 outerRadius={100}
                 paddingAngle={4}
                 dataKey="count"
-                nameKey="status"
+                nameKey="translatedStatus"
                 label={({ percent }) => `${((percent ?? 0) * 100).toFixed(0)}%`}
                 labelLine={false}
               >
@@ -62,7 +74,7 @@ export function OrderStatusChart({ data }: OrderStatusChartProps) {
                   borderRadius: '8px',
                   boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)',
                 }}
-                formatter={(value) => [value ?? 0, 'Orders']}
+                formatter={(value) => [value ?? 0, t('orders')]}
               />
               <Legend
                 verticalAlign="bottom"

@@ -25,6 +25,8 @@
     "login_button": "התחבר",
     "logging_in": "מתחבר...",
     "login_error": "שם משתמש או סיסמה שגויים",
+    "user_not_found": "משתמש לא נמצא",
+    "invalid_credentials": "סיסמה שגויה",
     "username_min_length": "שם משתמש חייב להכיל לפחות 4 תווים",
     "password_min_length": "סיסמה חייבת להכיל לפחות 8 תווים",
     "session_expired": "פג תוקף ההתחברות. אנא התחבר מחדש.",

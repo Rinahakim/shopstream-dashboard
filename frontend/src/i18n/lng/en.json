@@ -25,6 +25,8 @@
     "login_button": "Sign In",
     "logging_in": "Signing in...",
     "login_error": "Invalid username or password",
+    "user_not_found": "User not found",
+    "invalid_credentials": "Invalid password",
     "username_min_length": "Username must be at least 4 characters",
     "password_min_length": "Password must be at least 8 characters",
     "session_expired": "Your session has expired. Please sign in again.",
