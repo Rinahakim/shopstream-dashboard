@@ -81,7 +81,7 @@ describe('Auth Flow Integration', () => {
     await user.click(submitButton);
 
     await waitFor(() => {
-      expect(screen.getByText(/username is required/i)).toBeInTheDocument();
+      expect(screen.getByText(/username must be at least 4 characters/i)).toBeInTheDocument();
     });
   });
 
@@ -120,20 +120,17 @@ describe('Auth Flow Integration', () => {
 
   it('should show error message on failed login', async () => {
     const { authService } = await import('@/services');
-    const mockError = {
-      response: { data: { error: 'Invalid credentials' } },
-      isAxiosError: true,
-    };
-    vi.mocked(authService.login).mockRejectedValueOnce(mockError);
+    vi.mocked(authService.login).mockRejectedValueOnce(new Error('Login failed'));
 
     const user = userEvent.setup();
     render(<LoginForm />, { wrapper: createWrapper() });
 
-    await user.type(screen.getByLabelText(/username/i), 'wrong');
-    await user.type(screen.getByLabelText(/password/i), 'wrong');
+    await user.type(screen.getByLabelText(/username/i), 'wronguser');
+    await user.type(screen.getByLabelText(/password/i), 'wrongpassword');
     await user.click(screen.getByRole('button', { name: /sign in/i }));
 
     await waitFor(() => {
+      // Falls back to default error message from translations
       expect(screen.getByText(/invalid username or password/i)).toBeInTheDocument();
     });
   });
