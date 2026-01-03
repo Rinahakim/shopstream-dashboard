@@ -74,7 +74,7 @@ src/
 
 | Variable | Description | Example |
 |----------|-------------|---------|
-| `PORT` | Server port | `3000` |
+| `PORT` | Server port | `8787` |
 | `MONGO_URI` | MongoDB connection string | `mongodb+srv://...` |
 | `MONGO_DB_NAME` | Database name | `shopstream` |
 | `JWT_SECRET` | Secret for JWT signing | `your-secret-key` |

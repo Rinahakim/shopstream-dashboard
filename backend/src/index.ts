@@ -26,9 +26,9 @@ const app = new Hono();
 /** Request/response logger - only active in development */
 app.use('*', loggerMiddleware);
 
-/** CORS - allows frontend (port 3001) to make requests */
+/** CORS - allows frontend (port 3000) to make requests */
 app.use('*', cors({
-    origin: ['http://localhost:3001'],
+    origin: ['http://localhost:3000'],
     credentials: true,
 }));
 

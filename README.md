@@ -40,7 +40,7 @@ cd backend
 npm install
 cp .env.example .env
 # .env.example already contains Atlas cloud database connection
-npm run dev     # Starts on http://localhost:3000
+npm run dev     # Starts on http://localhost:8787
 ```
 
 ### 3. Setup Frontend
@@ -49,12 +49,12 @@ npm run dev     # Starts on http://localhost:3000
 cd frontend
 npm install
 cp .env.example .env.local
-npm run dev     # Starts on http://localhost:3001
+npm run dev     # Starts on http://localhost:3000
 ```
 
 ### 4. Access the App
 
-Open http://localhost:3001
+Open http://localhost:3000
 
 **Demo Credentials:**
 - Username: `admin`
