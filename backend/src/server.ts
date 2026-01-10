@@ -4,7 +4,7 @@ import { connectMongo } from './config/db';
 import { logger } from './utils/logger';
 import app from './index';
 
-const PORT = Number(process.env.PORT) || 3000;
+const PORT = Number(process.env.PORT) || 8787;
 
 async function main() {
     await connectMongo();
