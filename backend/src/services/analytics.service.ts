@@ -61,11 +61,11 @@ export class AnalyticsService {
                     orders: { $sum: 1 }
                 }
             },
-            { $sort: { _id: 1 } },
+            { $sort: { _id: 1 } }, // sort by date in ascending order
             { $project: { date: '$_id', revenue: 1, orders: 1, _id: 0 } }
         ]);
 
-        // Fill in missing days with zero revenue (days with no orders)
+        // Fill in missing days with zero revenue (days with no orders) - aggregate dont count the days with no orders
         const days: { date: string; revenue: number; orders: number }[] = [];
         for (let i = 6; i >= 0; i--) {
             const d = new Date();

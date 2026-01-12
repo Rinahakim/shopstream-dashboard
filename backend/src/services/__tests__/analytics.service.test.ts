@@ -3,8 +3,8 @@ import { AnalyticsService } from '../analytics.service';
 import Order from '../../models/order.model';
 import Product from '../../models/product.model';
 
-vi.mock('../../models/order.model');
-vi.mock('../../models/product.model');
+vi.mock('../../models/order.model'); // mock the order model
+vi.mock('../../models/product.model'); // mock the product model
 
 describe('AnalyticsService', () => {
     let analyticsService: AnalyticsService;
@@ -16,7 +16,7 @@ describe('AnalyticsService', () => {
 
     describe('getMetrics', () => {
         it('should return correct metrics', async () => {
-            vi.mocked(Order.aggregate).mockResolvedValue([{ total: 5000 }]);
+            vi.mocked(Order.aggregate).mockResolvedValue([{ total: 5000 }]); 
             vi.mocked(Order.countDocuments).mockResolvedValue(50);
             vi.mocked(Product.countDocuments).mockResolvedValue(10);
 

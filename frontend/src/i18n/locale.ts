@@ -10,7 +10,7 @@ export async function getUserLocale(): Promise<string> {
 }
 
 export async function setUserLocale(locale: 'en' | 'he'): Promise<void> {
-  const cookieStore = await cookies();
+  const cookieStore = await cookies(); 
   cookieStore.set(LOCALE_COOKIE, locale, {
     path: '/',
     maxAge: 60 * 60 * 24 * 365, // 1 year

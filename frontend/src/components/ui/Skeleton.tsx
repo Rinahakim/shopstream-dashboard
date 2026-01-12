@@ -6,7 +6,7 @@ interface SkeletonProps {
   className?: string;
 }
 
-export function Skeleton({ className }: SkeletonProps) {
+export function Skeleton({ className }: SkeletonProps) { // skeleton for the components - the components are loading
   return (
     <div
       className={cn(
@@ -17,7 +17,7 @@ export function Skeleton({ className }: SkeletonProps) {
   );
 }
 
-export function MetricCardSkeleton() {
+export function MetricCardSkeleton() { // skeleton for the metrics cards - Revenue, Orders, Avg. Order Value, Total Products
   return (
     <div className="bg-white rounded-xl shadow-sm border border-slate-100 p-6">
       <Skeleton className="h-4 w-24 mb-3" />
@@ -27,7 +27,7 @@ export function MetricCardSkeleton() {
   );
 }
 
-export function ChartSkeleton() {
+export function ChartSkeleton() { // skeleton for the cake graph and the revenue trend graph
   return (
     <div className="bg-white rounded-xl shadow-sm border border-slate-100 p-6">
       <Skeleton className="h-6 w-48 mb-6" />
@@ -36,7 +36,7 @@ export function ChartSkeleton() {
   );
 }
 
-export function TableRowSkeleton() {
+export function TableRowSkeleton() { // skeleton for the table rows - Product Name, Description, Price, Cost, Margin
   return (
     <tr>
       <td className="px-6 py-4"><Skeleton className="h-4 w-20" /></td>

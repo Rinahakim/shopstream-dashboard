@@ -15,7 +15,7 @@ export const getMetrics = async (c: Context) => {
     }
 };
 
-export const getRevenueTrend = async (c: Context) => {
+export const getRevenueTrend = async (c: Context) => { // hono injects the context object into the function
     try {
         const trend = await analyticsService.getRevenueTrend();
         return c.json(trend);

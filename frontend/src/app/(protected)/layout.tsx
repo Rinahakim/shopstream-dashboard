@@ -10,14 +10,14 @@ import { useAuth } from '@/context/AuthContext';
 export default function ProtectedLayout({ children }: { children: ReactNode }) {
   const { isAuthenticated, isLoading } = useAuth();
   const router = useRouter();
-  const locale = useLocale();
+  const locale = useLocale(); // get the current locale from cookie - hebrew or english
   const isRTL = locale === 'he';
 
-  useEffect(() => {
+  useEffect(() => { // if the user is not authenticated, redirect to the login page
     if (!isLoading && !isAuthenticated) {
       router.replace('/login');
     }
-  }, [isAuthenticated, isLoading, router]);
+  }, [isAuthenticated, isLoading, router]); // all this variables are dependencies for the useEffect hook
 
   if (isLoading) {
     return (

@@ -16,10 +16,10 @@ const navItems = [
 
 export function Sidebar() {
   const pathname = usePathname();
-  const { logout } = useAuth();
+  const { logout } = useAuth(); // get the logout function from the auth context
   const t = useTranslations('navigation');
   const tCommon = useTranslations('common');
-  const locale = useLocale();
+  const locale = useLocale(); // get the current locale from cookie - hebrew or english
   const isRTL = locale === 'he';
 
   return (
@@ -65,7 +65,7 @@ export function Sidebar() {
           <LanguageSwitcher />
         </div>
         <button
-          onClick={logout}
+          onClick={logout} 
           className="flex items-center gap-3 w-full px-4 py-3 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-all duration-200"
         >
           <LogOut className="w-5 h-5" />

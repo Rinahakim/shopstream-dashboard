@@ -4,7 +4,7 @@ import { getMetrics, getRevenueTrend, getOrderStatusDistribution } from '../cont
 
 const analytics = new Hono();
 
-analytics.use('*', authMiddleware);
+analytics.use('*', authMiddleware); // apply auth middleware to all routes in this file
 
 analytics.get('/metrics', getMetrics);
 analytics.get('/revenue-trend', getRevenueTrend);

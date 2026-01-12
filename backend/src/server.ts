@@ -4,12 +4,12 @@ import { connectMongo } from './config/db';
 import { logger } from './utils/logger';
 import app from './index';
 
-const PORT = Number(process.env.PORT) || 8787;
+const PORT = Number(process.env.PORT) || 8787; // prase to num because serve func is server function that needs a number not a string 
 
 async function main() {
     await connectMongo();
-    
-    serve({
+    //serve- serve is a server function that listens for incoming requests and forwards them to the Hono app
+    serve({ 
         fetch: app.fetch,
         port: PORT,
     });

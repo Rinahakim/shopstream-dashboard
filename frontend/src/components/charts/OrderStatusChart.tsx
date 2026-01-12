@@ -36,7 +36,7 @@ export function OrderStatusChart({ data }: OrderStatusChartProps) {
     return tStatus(statusMap[status] || status);
   };
 
-  const chartData = data.map((item) => ({
+  const chartData = data.map((item) => ({ 
     ...item,
     translatedStatus: getStatusTranslation(item.status),
     fill: COLORS[item.status] || '#64748b',
@@ -50,31 +50,31 @@ export function OrderStatusChart({ data }: OrderStatusChartProps) {
       <CardContent>
         <div className="h-80">
           <ResponsiveContainer width="100%" height="100%">
-            <PieChart>
-              <Pie
-                data={chartData}
+            <PieChart> 
+              <Pie // the cake chart - the chart is a circle and the slices are the statuses
+                data={chartData} // the data for the chart cake
                 cx="50%"
                 cy="50%"
                 innerRadius={60}
                 outerRadius={100}
                 paddingAngle={4}
-                dataKey="count"
-                nameKey="translatedStatus"
-                label={({ percent }) => `${((percent ?? 0) * 100).toFixed(0)}%`}
+                dataKey="count" // show the number of orders in the chart cake
+                nameKey="translatedStatus" // show the name of the status in the chart cake
+                label={({ percent }) => `${((percent ?? 0) * 100).toFixed(0)}%`} // show the percentage(%) of the status in the chart cake
                 labelLine={false}
               >
                 {chartData.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={entry.fill} />
+                  <Cell key={`cell-${index}`} fill={entry.fill} /> // color the slices of the chart cake
                 ))}
               </Pie>
-              <Tooltip
+              <Tooltip // style for the card in pointer hover a point in the chart cake
                 contentStyle={{
                   backgroundColor: '#fff',
                   border: '1px solid #e2e8f0',
                   borderRadius: '8px',
                   boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)',
                 }}
-                formatter={(value) => [value ?? 0, t('orders')]}
+                formatter={(value) => [value ?? 0, t('orders')]} // show the number of orders in the chart cake
               />
               <Legend
                 verticalAlign="bottom"

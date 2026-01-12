@@ -21,7 +21,7 @@ export default function DashboardPage() {
     <div className="animate-fadeIn">
       <Header title={t('title')} subtitle={t('subtitle')} />
 
-      {/* Metrics Grid */}
+      {/* Metrics Grid - Revenue, Orders, Avg. Order Value, Total Products*/}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         {metricsLoading ? (
           <>

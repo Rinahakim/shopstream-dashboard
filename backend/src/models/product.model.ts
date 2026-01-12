@@ -9,7 +9,7 @@ export interface IProduct extends Document {
     createdAt: Date;
 }
 
-const productSchema = new Schema<IProduct>({
+const productSchema = new Schema<IProduct>({ // schema is a function that creates a new schema from a model
     name: { type: String, required: true },
     description: { type: String },
     price: { type: Number, required: true },
@@ -18,6 +18,6 @@ const productSchema = new Schema<IProduct>({
     createdAt: { type: Date, default: Date.now },
 });
 
-const Product = model<IProduct>('Product', productSchema);
+const Product = model<IProduct>('Product', productSchema); // model is a function that creates a new model from a schema
 
 export default Product;

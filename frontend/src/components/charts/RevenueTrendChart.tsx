@@ -21,11 +21,11 @@ interface RevenueTrendChartProps {
 
 export function RevenueTrendChart({ data }: RevenueTrendChartProps) {
   const t = useTranslations('dashboard.charts');
-  const locale = useLocale();
+  const locale = useLocale(); // get the current locale from cookie - hebrew or english
 
-  const formattedData = data.map((item) => ({
+  const formattedData = data.map((item) => ({ 
     ...item,
-    dateLabel: formatShortDate(item.date, locale),
+    dateLabel: formatShortDate(item.date, locale), // format the date to the current locale
   }));
 
   return (
@@ -36,10 +36,10 @@ export function RevenueTrendChart({ data }: RevenueTrendChartProps) {
       <CardContent>
         <div className="h-80">
           <ResponsiveContainer width="100%" height="100%">
-            <LineChart data={formattedData} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+            <LineChart data={formattedData} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}> 
               <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
               <XAxis 
-                dataKey="dateLabel" 
+                dataKey="dateLabel" //show the date of the points in the graph
                 stroke="#64748b"
                 fontSize={12}
                 tickLine={false}
@@ -49,7 +49,7 @@ export function RevenueTrendChart({ data }: RevenueTrendChartProps) {
                 stroke="#64748b"
                 fontSize={12}
                 tickLine={false}
-                tickFormatter={(value) => `$${value}`}
+                tickFormatter={(value) => `$${value}`} // add $ to the value
               />
               <YAxis 
                 yAxisId="right" 
@@ -58,16 +58,16 @@ export function RevenueTrendChart({ data }: RevenueTrendChartProps) {
                 fontSize={12}
                 tickLine={false}
               />
-              <Tooltip
+              <Tooltip // style for the card in pointer hover a point in the graph
                 contentStyle={{
                   backgroundColor: '#fff',
                   border: '1px solid #e2e8f0',
                   borderRadius: '8px',
                   boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)',
                 }}
-                formatter={(value, name) => {
+                formatter={(value, name) => { // format the value and name of the point in the graph
                   const numValue = typeof value === 'number' ? value : 0;
-                  const isRevenue = name === t('revenue');
+                  const isRevenue = name === t('revenue'); // check if the point is revenue
                   return [
                     isRevenue ? formatCurrency(numValue) : numValue,
                     isRevenue ? t('revenue') : t('orders'),
@@ -75,20 +75,20 @@ export function RevenueTrendChart({ data }: RevenueTrendChartProps) {
                 }}
               />
               <Legend />
-              <Line
+              <Line // line for the revenue
                 yAxisId="left"
                 type="monotone"
-                dataKey="revenue"
+                dataKey="revenue" //show the revenue data in card 
                 name={t('revenue')}
                 stroke="#6366f1"
                 strokeWidth={3}
                 dot={{ fill: '#6366f1', strokeWidth: 2, r: 4 }}
                 activeDot={{ r: 6 }}
               />
-              <Line
+              <Line // line for the orders
                 yAxisId="right"
                 type="monotone"
-                dataKey="orders"
+                dataKey="orders" //show the number of orders in card 
                 name={t('orders')}
                 stroke="#10b981"
                 strokeWidth={2}

@@ -16,7 +16,7 @@ export default function LoginPage() {
   const locale = useLocale();
   const isRTL = locale === 'he';
 
-  useEffect(() => {
+  useEffect(() => { // if the user is authenticated, redirect to the dashboard page
     if (!isLoading && isAuthenticated) {
       router.replace('/dashboard');
     }
